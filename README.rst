@@ -28,4 +28,7 @@ Quick start
 5. Start the development server and visit http://127.0.0.1:8000/admin/
    to create a translations (you'll need the Admin app enabled).
 
-6. Visit http://127.0.0.1:8000/translation/ to participate in the poll.
+6. In case you want to change or extend app models, after making the desired changes run:
+
+    python make_migrations.py
+
