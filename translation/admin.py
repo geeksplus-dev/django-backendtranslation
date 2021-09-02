@@ -17,3 +17,4 @@ class TranslationKeyAdmin(admin.ModelAdmin):
 
 
 admin.site.register(TranslationKey, TranslationKeyAdmin)
+admin.site.register(Translation)

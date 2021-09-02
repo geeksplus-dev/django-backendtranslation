@@ -46,3 +46,6 @@ class Translation(TimeStampedModel):
             models.UniqueConstraint(
                 fields=['translation_key', 'language'], name='Translation Value')
         ]
+
+    def __str__(self):
+        return f"key: {self.translation_key.name}, translation: {self.value}"
