@@ -11,10 +11,11 @@ class TranslationInline(admin.TabularInline):
 
 
 class TranslationKeyAdmin(admin.ModelAdmin):
+    def queryset(self, request, queryset):
+        qs = TranslationKey.objects.prefetch_related('translation_set').all()
     inlines = [
         TranslationInline
     ]
 
 
 admin.site.register(TranslationKey, TranslationKeyAdmin)
-admin.site.register(Translation)
