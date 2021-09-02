@@ -11,8 +11,9 @@ class TranslationInline(admin.TabularInline):
 
 
 class TranslationKeyAdmin(admin.ModelAdmin):
-    def queryset(self, request, queryset):
+    def get_queryset(self, request):
         qs = TranslationKey.objects.prefetch_related('translation_set').all()
+        return qs
     inlines = [
         TranslationInline
     ]

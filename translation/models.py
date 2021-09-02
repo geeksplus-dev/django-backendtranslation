@@ -29,7 +29,7 @@ class TranslationKey(TimeStampedModel):
         ]
 
     def __str__(self):
-        return f"namespace: {self.namespace}, Key: {self.name} translation : {self.name} {[(item.language, item.value) for item in self.translation_set]}"
+        return f"namespace: {self.namespace}, Key: {self.name} translation : {[(item.language, item.value) for item in self.translation_set.all()]}"
 
 
 class Translation(TimeStampedModel):
