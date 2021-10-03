@@ -1,6 +1,5 @@
 from django.urls import path
 from .views import TranslationKeyViewSet, TranslationViewSet
-from rest_framework import routers
 from . import views
 app_name = 'translation'
 
